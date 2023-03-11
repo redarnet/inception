@@ -1,0 +1,8 @@
+docker exec -it mariadb bash
+mariadb -u mdb_user -p
+> mdb_password
+show databases;
+use wordpress;
+show tables;
+select * from wp_users;
+

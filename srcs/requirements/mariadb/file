@@ -1,0 +1,3 @@
+sudo docker exece -it nom_docker /bin/bash
+mysql -u root
+SHOW DATABASES
