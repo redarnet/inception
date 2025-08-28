@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 RUN apt-get update -y && apt-get upgrade -y \
 && apt-get install nginx -y && apt-get install openssl -y && apt-get install vim -y \

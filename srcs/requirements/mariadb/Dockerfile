@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 RUN apt-get update -y
 RUN apt-get upgrade -y
@@ -8,7 +8,8 @@ COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY conf/mariadb-entrypoint.sh /mariadb-entrypoint.sh
 RUN mkdir -p /run/mysqld && chown -R mysql:mysql /run/mysqld
 
-Run service mysql start
+CMD ["mysqld"]
+
 RUN chmod +x ./mariadb-entrypoint.sh
 EXPOSE 3306
 ENTRYPOINT      ["/bin/sh", "./mariadb-entrypoint.sh"]
