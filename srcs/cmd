@@ -1,5 +1,0 @@
-docker-compose -f  docker-compose.yml stop
-docker-compose -f  docker-compose.yml up -d --build
-docker systemctl stop nginx
-docker systemctl status nginx
-
